@@ -14,7 +14,7 @@ const Socket = () => {
   const [isRegistered, setIsRegistered] = useState(false);
 
   useEffect(() => {
-    const s = io(`${process.env.SERVER_API_URL}`);
+    const s = io("https://socket-io-6ow3.onrender.com");
     setSocket(s);
 
     s.on("usercount", (count) => {
